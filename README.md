@@ -1,8 +1,4 @@
-# Mini-Project-Skin-Lesions-Cancer-Detection.
-
-
-
-![image](https://github.com/user-attachments/assets/9aa85c9a-605e-4fae-b40a-11ba48733eb5)
+# Mini-Project-Skin-Lesions-Cancer-Detection
 
 
 Abstract:
