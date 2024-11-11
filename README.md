@@ -1,5 +1,10 @@
 # Mini-Project-Skin-Lesions-Cancer-Detection.
 
+
+
+![image](https://github.com/user-attachments/assets/9aa85c9a-605e-4fae-b40a-11ba48733eb5)
+
+
 Abstract:
 
 Skin cancer, one of the most common forms of cancer worldwide, poses a significant health threat, with increasing incidences observed globally. Early detection of skin cancer is crucial for effective treatment and improved survival rates, but many individuals lack access to specialized healthcare services for timely diagnosis. To address this gap, the "Skin Lesion/Cancer Detection" project proposes the development of an advanced application that employs machine learning and computer vision techniques to automatically classify skin lesions as benign (non-cancerous) or malignant (cancerous). By leveraging deep learning models and digital image processing, the application aims to provide an accessible and efficient tool for users to perform a preliminary self-assessment of suspicious skin lesions.
