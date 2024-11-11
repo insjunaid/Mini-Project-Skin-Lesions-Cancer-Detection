@@ -12,5 +12,4 @@ Furthermore, this project aligns with the growing trend of incorporating AI-base
 
 Ultimately, the "Skin Lesion/Cancer Detection" project represents an innovative solution to a global health problem, combining the power of artificial intelligence and medical image analysis to offer a potentially life-saving tool for early skin cancer detection. By democratizing access to skin cancer diagnostics, this project has the potential to improve outcomes, save lives, and raise awareness about the importance of regular skin checks and early intervention in cancer care.
 
-![Uploading {4BAA3567-6D63-4B78-AE8F-0AD2BBF0004D}.png…]()
 
