@@ -1,19 +1,181 @@
 # Mini-Project-Skin-Lesions-Cancer-Detection
 
+# Skin Lesion Detection Using Deep Learning
 
-Abstract:
+This repository contains a PyTorch-based implementation for detecting various types of skin lesions using a fine-tuned EfficientNet-B4 model.The project includes a Flask web application to upload skin lesion images and obtain predictions with recommendations for further action. The datsets used here is https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000
 
-Skin cancer, one of the most common forms of cancer worldwide, poses a significant health threat, with increasing incidences observed globally. Early detection of skin cancer is crucial for effective treatment and improved survival rates, but many individuals lack access to specialized healthcare services for timely diagnosis. To address this gap, the "Skin Lesion/Cancer Detection" project proposes the development of an advanced application that employs machine learning and computer vision techniques to automatically classify skin lesions as benign (non-cancerous) or malignant (cancerous). By leveraging deep learning models and digital image processing, the application aims to provide an accessible and efficient tool for users to perform a preliminary self-assessment of suspicious skin lesions.
+---
 
-The core of this project lies in applying cutting-edge image analysis techniques, particularly convolutional neural networks (CNNs), which are well-suited for visual pattern recognition tasks. These models are trained on a large dataset of labeled skin lesion images, enabling the system to detect subtle features associated with different types of skin lesions, including melanomas, basal cell carcinoma, and squamous cell carcinoma. The tool's primary goal is to identify potential cancerous lesions early, thereby encouraging users to seek further professional medical advice when necessary.
+## Table of Contents
 
-In addition to offering an effective means of early detection, this tool can be particularly beneficial for individuals in remote areas or those with limited access to dermatologists and medical facilities. By providing a fast, reliable, and non-invasive method for evaluating skin lesions, the application empowers users to take proactive steps toward managing their health. The system's integration of artificial intelligence in the medical field represents a transformative approach to healthcare, utilizing the power of machine learning to enhance diagnostic capabilities in dermatology.
+- [Introduction](#introduction)
+- [Dataset](#dataset)
+- [Requirements](#requirements)
+- [Model Architecture](#model-architecture)
+- [Training](#training)
+  - [Data Augmentation](#data-augmentation)
+  - [Training Script](#training-script)
+- [Evaluation](#evaluation)
+  - [Confusion Matrix](#confusion-matrix)
+  - [ROC Curve](#roc-curve)
+- [Web Application](#web-application)
+  - [Flask Application](#flask-application)
+- [Results](#results)
+- [Installation](#installation)
+- [Usage](#usage)
 
-Furthermore, this project aligns with the growing trend of incorporating AI-based solutions in healthcare, which has already shown promising results in fields such as radiology and pathology. The impact of such a tool is not limited to individual users; it also holds potential for integration into larger healthcare systems, where it could be used as a support tool for healthcare professionals, enabling more efficient and accurate diagnoses. As the system evolves and is exposed to more diverse datasets, it will continue to improve in accuracy, further enhancing its role in the early detection and management of skin cancer.
 
-Ultimately, the "Skin Lesion/Cancer Detection" project represents an innovative solution to a global health problem, combining the power of artificial intelligence and medical image analysis to offer a potentially life-saving tool for early skin cancer detection. By democratizing access to skin cancer diagnostics, this project has the potential to improve outcomes, save lives, and raise awareness about the importance of regular skin checks and early intervention in cancer care.
+---
 
-Some types of Skin lesions can be seen as below in the images:
+## Introduction
+
+Skin cancer is one of the most common cancers worldwide, and early detection is critical for effective treatment. This project utilizes deep learning to classify skin lesion images into seven categories, including both benign and malignant types, providing actionable insights.
+
+## Dataset
+
+The dataset includes images of skin lesions categorized into the following classes:
+
+1. **Actinic keratoses and intraepithelial carcinoma (akiec)** - Malignant
+2. **Basal cell carcinoma (bcc)** - Malignant
+3. **Benign keratosis-like lesions (bkl)** - Benign
+4. **Dermatofibroma (df)** - Benign
+5. **Melanoma (mel)** - Malignant
+6. **Melanocytic nevi (nv)** - Benign
+7. **Vascular lesions (vasc)** - Benign
+
+The dataset is split into training (70%), validation (15%), and testing (15%) sets. Data balancing techniques were used to ensure equal representation of all classes.
+
+## Requirements
+
+Dependencies:
+
+- Python 3.8+
+- PyTorch
+- Torchvision
+- Flask
+- Pillow
+- scikit-learn
+- Matplotlib
+- Seaborn
+- TQDM
+
+Install dependencies using:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Model Architecture
+
+The project uses a fine-tuned EfficientNet-B4 model with the following modifications to the classifier layer:
+
+- `Linear(in_features, 512)`
+- `ReLU()`
+- `Dropout(0.5)`
+- `Linear(512, 7)`
+
+The model is pretrained on ImageNet and fine-tuned on the skin lesion dataset.
+
+## Training
+
+### Data Augmentation
+
+The training data is augmented with transformations, including:
+
+- Random horizontal and vertical flips
+- Random rotation (up to 30 degrees)
+- Random resized crop (scale: 70-100%)
+- Color jitter (brightness, contrast, saturation, hue)
+- Normalization
+
+### Training Script
+
+The training script implements:
+
+- Early stopping with a patience of 6 epochs
+- Weighted loss function to address class imbalance
+- Learning rate scheduler to reduce learning rate on plateau
+
+Run the training script:
+
+```bash
+python train.py
+```
+
+## Evaluation
+
+### Confusion Matrix
+
+The confusion matrix is plotted to visualize the model’s performance on each class.
+
+### ROC Curve
+
+ROC curves are generated for all classes to evaluate the classifier’s ability to distinguish between categories.
+
+## Web Application
+
+### Flask Application
+
+The Flask app allows users to upload an image of a skin lesion and provides the following:
+
+- Predicted class
+- Malignancy status (benign or malignant)
+- Recommendation based on the result
+
+Run the Flask application:
+
+```bash
+python app.py
+```
+
+Access the app at `http://127.0.0.1:5000/`.
+
+## Results
+
+- **Accuracy**: The model achieves a high accuracy on the test set.
+- **AUC-ROC**: High AUC scores for malignant classes indicate strong performance.
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/skin-lesion-detection.git
+   ```
+
+2. Install the dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+1. Place the dataset in the appropriate folder structure:
+
+   ```
+   dataset/
+       train/
+           class_1/
+           class_2/
+           ...
+       val/
+           class_1/
+           class_2/
+           ...
+       test/
+           class_1/
+           class_2/
+           ...
+   ```
+
+2. Run the training script to train the model.
+3. Launch the Flask app to predict skin lesions.
+
+This project demonstrates the potential of deep learning in medical image analysis, highlighting its role in aiding early detection and diagnosis.
+
+
+Types of Skin lesions can be seen as below in the images:
 
 
 ![image](https://github.com/user-attachments/assets/183aefca-aabe-4d40-9681-cb907ce08e22)
