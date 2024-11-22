@@ -22,7 +22,7 @@ This repository contains a PyTorch-based implementation for detecting various ty
 - [Results](#results)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Conclusion](#conclusion)
+- [Conclusion](#Conclusion)
 
 ---
 
@@ -166,8 +166,11 @@ Access the app at `http://127.0.0.1:5000/`.
 2. Run the training script to train the model.
 3. Launch the Flask app to predict skin lesions.
 
-## conclusion
+## Conclusion
 This project demonstrates the potential of deep learning in medical image analysis, highlighting its role in aiding early detection and diagnosis.
+
+
+
 
 
 
