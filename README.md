@@ -22,7 +22,7 @@ This repository contains a PyTorch-based implementation for detecting various ty
 - [Results](#results)
 - [Installation](#installation)
 - [Usage](#usage)
-- 
+
 
 ---
 
