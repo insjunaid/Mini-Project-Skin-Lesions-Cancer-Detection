@@ -1,8 +1,8 @@
-# Mini-Project-Skin-Lesions-Cancer-Detection
 
-# Skin Lesion Detection Using Deep Learning
 
-This repository contains a PyTorch-based implementation for detecting various types of skin lesions using a fine-tuned EfficientNet-B4 model.The project includes a Flask web application to upload skin lesion images and obtain predictions with recommendations for further action. The datsets used here is https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000
+### Skin Lesion Detection Using Deep Learning
+
+This repository contains a PyTorch-based implementation for detecting various types of skin lesions using a fine-tuned EfficientNet-B4 model.The project includes a Flask web application to upload skin lesion images and obtain predictions with recommendations for further action.
 
 ---
 
@@ -33,7 +33,7 @@ Skin cancer is one of the most common cancers worldwide, and early detection is 
 
 ## Dataset
 
-The dataset includes images of skin lesions categorized into the following classes:
+The dataset, sourced from HAM10000, includes images of skin lesions categorized into the following classes:
 
 1. **Actinic keratoses and intraepithelial carcinoma (akiec)** - Malignant
 2. **Basal cell carcinoma (bcc)** - Malignant
