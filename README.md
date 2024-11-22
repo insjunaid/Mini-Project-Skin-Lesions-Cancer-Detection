@@ -1,8 +1,7 @@
-
-
 ### Skin Lesion Detection Using Deep Learning
 
-This repository contains a PyTorch-based implementation for detecting various types of skin lesions using a fine-tuned EfficientNet-B4 model.The project includes a Flask web application to upload skin lesion images and obtain predictions with recommendations for further action.
+
+This repository contains a PyTorch-based implementation for detecting various types of skin lesions using a fine-tuned EfficientNet-B4 model. The project includes a Flask web application to upload skin lesion images and obtain predictions with recommendations for further action.
 
 ---
 
@@ -23,7 +22,7 @@ This repository contains a PyTorch-based implementation for detecting various ty
 - [Results](#results)
 - [Installation](#installation)
 - [Usage](#usage)
-
+- 
 
 ---
 
@@ -33,7 +32,7 @@ Skin cancer is one of the most common cancers worldwide, and early detection is 
 
 ## Dataset
 
-The dataset, sourced from HAM10000, includes images of skin lesions categorized into the following classes:
+The dataset, sourced from [HAM10000](https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000), includes images of skin lesions categorized into the following classes:
 
 1. **Actinic keratoses and intraepithelial carcinoma (akiec)** - Malignant
 2. **Basal cell carcinoma (bcc)** - Malignant
@@ -137,13 +136,8 @@ Access the app at `http://127.0.0.1:5000/`.
 
 ## Installation
 
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/your-username/skin-lesion-detection.git
-   ```
-
-2. Install the dependencies:
+ 
+  Install the dependencies:
 
    ```bash
    pip install -r requirements.txt
@@ -172,7 +166,10 @@ Access the app at `http://127.0.0.1:5000/`.
 2. Run the training script to train the model.
 3. Launch the Flask app to predict skin lesions.
 
+
 This project demonstrates the potential of deep learning in medical image analysis, highlighting its role in aiding early detection and diagnosis.
+
+
 
 
 Types of Skin lesions can be seen as below in the images:
