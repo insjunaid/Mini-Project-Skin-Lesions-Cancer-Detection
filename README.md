@@ -29,7 +29,7 @@ This repository contains a PyTorch-based implementation for detecting various ty
 
 ## Introduction
 
-Skin cancer is one of the most common cancers worldwide, and early detection is critical for effective treatment. This project utilizes deep learning to classify skin lesion images into seven categories, including both benign and malignant types, providing actionable insights.
+Skin cancer is one of the most common cancers worldwide, and early detection is critical for effective treatment. Skin lesion detection is a critical area of medical imaging and dermatology, focused on identifying and diagnosing skin abnormalities such as moles, lesions, or growths that could potentially be harmful. This project utilizes deep learning to classify skin lesion images into seven categories, including both benign and malignant types, providing actionable insights.
 
 ## Dataset
 
