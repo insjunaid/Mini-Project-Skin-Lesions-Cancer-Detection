@@ -43,6 +43,7 @@ The dataset, sourced from [HAM10000](https://www.kaggle.com/datasets/kmader/skin
 6. **Melanocytic nevi (nv)** - Benign
 7. **Vascular lesions (vasc)** - Benign
 
+![l](https://github.com/user-attachments/assets/ad1e339b-16d4-4677-96a0-47db7dd77a2e)
 
 
 The dataset is split into training (70%), validation (15%), and testing (15%) sets. Data balancing techniques were used to ensure equal representation of all classes.
