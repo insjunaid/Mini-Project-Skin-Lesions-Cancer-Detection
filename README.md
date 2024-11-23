@@ -179,5 +179,4 @@ This project demonstrates the potential of deep learning in medical image analys
 Types of Skin lesions can be seen as below in the images:
 
 
-![image](https://github.com/user-attachments/assets/183aefca-aabe-4d40-9681-cb907ce08e22)
 
