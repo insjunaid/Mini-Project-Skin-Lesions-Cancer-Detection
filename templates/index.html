@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Lesion Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/uploads/newimg.webp'); /* Corrected path */
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-attachment: fixed; /* Makes the background image fixed while scrolling */
+            color: #333;
+        }
+
+        header {
+            background-color: rgba(1, 12, 26, 0.8); /* Medium green with transparency */
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            color: rgba(1, 12, 26, 0.8); /* Dark green */
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #c8e6c9; /* Light green border */
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group button {
+            background-color:rgba(1, 12, 26, 0.8); /* Darker green */
+            color: white;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .form-group button:hover {
+            background-color: rgba(1, 12, 26, 0.8); /* Even darker green */
+        }
+
+        .result-section {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f1f8e9; /* Pale green */
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #c5e1a5; /* Soft green border */
+        }
+
+        .result-section img {
+            max-width: 40%;
+            max-height: 40%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 2px solid rgba(1, 12, 26, 0.8); /* Accent green */
+        }
+
+        .result-section h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: rgba(1, 12, 26, 0.8); /* Dark green */
+        }
+
+        .result-section h4 {
+            margin: 5px 0;
+            font-size: 1.3rem;
+            font-family: 'Verdana', sans-serif;
+            color:rgba(1, 12, 26, 0.8); /* Dark green */
+        }
+
+        .result-section p {
+            margin: 10px 0;
+            font-size: 1.1rem;
+            font-family: 'Georgia', serif;
+            color: #5d4037; /* Earthy brown */
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Skin Lesion Detection System</h1>
+    </header>
+    <div class="container">
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Upload an Image:</label>
+                <input type="file" name="file" id="file" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Analyze</button>
+            </div>
+        </form>
+
+        {% if image_path %}
+        <div class="result-section">
+            <h3>Uploaded Image:</h3>
+            <img src="{{ url_for('static', filename=image_path) }}" alt="Uploaded Image">
+            <h4>Predicted Class: {{ predicted_class }}</h4>
+            <h4>Malignancy: {{ malignancy }}</h4>
+            <p>{{ recommendation }}</p>
+        </div>
+        {% endif %}
+    </div>
+   
+</body>
+</html>
