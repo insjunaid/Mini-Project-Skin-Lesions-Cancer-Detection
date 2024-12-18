@@ -177,8 +177,7 @@ Images of Types of Skin Lesions
 
 ![l](https://github.com/user-attachments/assets/ad1e339b-16d4-4677-96a0-47db7dd77a2e)
 
-ACKNOWLEDGEMENT
-
-under guidance of  [Dr Agughasi Victor Ikechukwu](https://github.com/Victor-Ikechukwu)
+## ACKNOWLEDGEMENT
+Under guidance of  [Dr Agughasi Victor Ikechukwu](https://github.com/Victor-Ikechukwu)
 
 
