@@ -1,7 +1,6 @@
 ### Skin Lesion Detection Using Deep Learning
 
 
-![Screenshot 2024-11-24 015331](https://github.com/user-attachments/assets/9ff85fd8-daf4-43ae-a568-01c8cb8b193c)
 
 
 
