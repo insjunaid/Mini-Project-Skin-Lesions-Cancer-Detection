@@ -3,6 +3,7 @@ from PIL import Image
 import torch
 from torchvision import transforms
 import os
+import numpy as np
 
 app = Flask(__name__)
 
