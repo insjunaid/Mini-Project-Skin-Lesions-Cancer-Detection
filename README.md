@@ -36,8 +36,6 @@ Skin cancer is one of the most common cancers worldwide, and early detection is 
 
 ## Dataset
 
-The dataset, sourced from [HAM10000](https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000), includes images of skin lesions categorized into the following classes:
-
 1. **Actinic keratoses and intraepithelial carcinoma (akiec)** - Malignant
 2. **Basal cell carcinoma (bcc)** - Malignant
 3. **Benign keratosis-like lesions (bkl)** - Benign
